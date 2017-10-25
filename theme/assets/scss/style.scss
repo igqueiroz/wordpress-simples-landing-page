@@ -1,4 +1,6 @@
-	@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,900');
+@import "globals";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,900');
 
 	* {
 		padding: 0;
@@ -57,64 +59,57 @@
 		background:none;
 	}
 
-	/* variables 
-		whiteColor: #ffffff;
-		redColor: #b21736;
-		redColor2: #e11a33;
-		blackColor: #000000;
-		grayColor: #6d6d6d;
-	*/
-	
 
 	/* CSS FOR ALL MEDIA QUERIES   */
 	/* HEADER  */
-	header {
-		width: 100%;
-		background: #ffffff;
-		padding: 38px 0 26px 0;
-		float: left;
-	}
 	.wrapper {
 		margin: 0 auto;
 		position: relative;
 
 	}
-	header #logotype {
-		background: url(../../assets/images/empiricus-sprites.png) 0px 0px;
-	    width: 210px;
-	    height: 90px;
-	    text-indent: -99999px;
-	    position: relative;
-	    float: left;
-	}
-	header #logotype a {
-		position: absolute;
-		top: 0;
-		left: 0;
+	header {
 		width: 100%;
-		height: 90px;
+		background: $whiteColor;
+		padding: 38px 0 26px 0;
+		float: left;
+		
+		#logotype {
+			background: ($spriteIcons) 0px 0px;
+		    width: 210px;
+		    height: 90px;
+		    text-indent: -99999px;
+		    position: relative;
+		    float: left;
+		}
 
-	}
-	header ul {
-		list-style-type: none;
-		padding-top: 31px;
-		padding-left: 265px;
-	}
-	
-	
+		#logotype a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 90px;
+		}
 
-	header ul li a:link, header ul li a:visited {
-		padding: 10px;
-    	float: left;
-    	background-color: #ffffff;
-    	font-size: 15px;
-    	text-transform: uppercase;
-    	text-decoration: none;
-    	color: #000000;
-	}
-	header ul li a:hover {
-		background-color: #e11a33;
-		color: #ffffff;
+		 ul {
+			list-style-type: none;
+			padding-top: 31px;
+			padding-left: 265px;
+		}
+		
+		ul li a:link,  ul li a:visited {
+			padding: 10px;
+	    	float: left;
+	    	background-color: $whiteColor;
+	    	font-size: 15px;
+	    	text-transform: uppercase;
+	    	text-decoration: none;
+	    	color: $blackColor;
+		}
+
+		 ul li a:hover {
+			background-color: $redColor2;
+			color: $whiteColor;
+		}
 	}
 
 	/* SECTION  */
@@ -123,316 +118,319 @@
 		float: left;
 		padding: 73px 0;
 
-	}
+		h1 {
+			font-size: 42px;
+			text-transform: uppercase;
+			color: $whiteColor;
+			margin-bottom: 25px;
+		}
 
-	section h1 {
-		font-size: 42px;
-		text-transform: uppercase;
-		color: #ffffff;
-		margin-bottom: 25px;
-	}
+		h2 {
+			color: $grayColor;
+			text-transform: uppercase;
+			font-weight: 500;
+			margin-bottom: 30px;
+			font-size: 29px;
+		}
 
-	section h2 {
-		color: #6d6d6d;
-		text-transform: uppercase;
-		font-weight: 500;
-		margin-bottom: 30px;
-		font-size: 29px;
-	}
+		p {
+			color: $grayColor;
+		    font-weight: 400;
+		    margin-bottom: 38px;
+		    font-size: 21px;
+		    line-height: 30px;
+		}
 
-	section p {
-		color: #6d6d6d;
-	    font-weight: 400;
-	    margin-bottom: 38px;
-	    font-size: 21px;
-	    line-height: 30px;
-	}
+		button {
+			background: $redColor;
+			color: $whiteColor;
+			text-align: center;
+			padding: 23px 49px;
+			font-size: 21px;
+			text-transform: uppercase;
+			font-weight: 600;
+			cursor: pointer;
+			margin-left: -5px;
+		}
+		button:hover {
+			background: $redColor2;
+		}
 
-	section button {
-		background: #b21736;
-		color: #ffffff;
-		text-align: center;
-		padding: 23px 49px;
-		font-size: 21px;
-		text-transform: uppercase;
-		font-weight: 600;
-		cursor: pointer;
-		margin-left: -5px;
-	}
-	section button:hover {
-		background: #e11a33;
-	}
+		.aligncenter {
+			width: 100%;
+			text-align: center;
+			float: left;
+		}
 
-	section .aligncenter {
-		width: 100%;
-		text-align: center;
-		float: left;
-	}
+		h1.red {
+			color: $redColor;
+		}
 
-	section h1.red {
-		color: #b21736;
+		h4 {
+			font-size: 21px;
+			color: $whiteColor;
+			font-weight: 400;
+		}
 	}
-
-	section h4 {
-		font-size: 21px;
-		color: #ffffff;
-		font-weight: 400;
-	}
-
+	
 	section.form {
-		padding: 0;
-		position: relative;
-	}
-	section.form #main-slider {
-		background: url(../../assets/images/dolar.jpg) center center;
-		margin-bottom: -20px;
-	}
+			padding: 0;
+			position: relative;
+		
+			#main-slider {
+				margin-bottom: -20px;
+			}
 
-	section.form .text {
-		padding: 80px 0;
-		text-align: center;
-	}
+			.text {
+				padding: 80px 0;
+				text-align: center;
+			}
 
-	section.form h1 {
-		text-transform: uppercase;
-		color: #ffffff;
-		margin-bottom: 0;
-	}
+		 h1 {
+			text-transform: uppercase;
+			color: $whiteColor;
+			margin-bottom: 0;
+		}
 
-	section.form input {
-		padding: 21px 30px;
-	    color: #e11a33;
-	    font-size: 21px;
-	    font-style: italic;
-	    width: 392px;
-	    background: #ffffff;
-	}
+		 input {
+			padding: 21px 30px;
+		    color: $redColor2;
+		    font-size: 21px;
+		    font-style: italic;
+		    width: 392px;
+		    background: $whiteColor;
+		}
 
-	section.form h4 {
-		font-weight: 400;
-		padding: 54px 0;
-		color: #ffffff;
+		h4 {
+			font-weight: 400;
+			padding: 54px 0;
+			color: $whiteColor;
 
-	}
-
-	section.form a:link, section.form a:visited {
+		}
+		
+		a:link,  a:visited {
 		text-decoration: none;
-		color: #ffffff;
-	}
+		color: $whiteColor;
+		}
 
-	section.form .social-media {
+		.social-media {
 		position: absolute;
 	    top: 160px;
 	    left: -48px;
-	}
+		}
 
-	section.form .social-media ul {
+		.social-media ul {
 	    list-style-type: none;
 	    height: 100px;
 	    width: 50px;
-	}
+		}
 
-	section.form .social-media ul li{
+		.social-media ul li{
 		float: left;
-	    background: url(../../assets/images/empiricus-sprites.png);
+	    background: ($spriteIcons);
 	    height: 48px;
 	    width: 48px;
 	    position: relative;
-	}
+		}
 
-	section.form .social-media ul li a:link, section.form .social-media ul li a:visited{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 57px;
-	}
+		.social-media ul li a:link, .social-media ul li a:visited{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 57px;
+		}
 
-	section.form .social-media ul li.facebook {
-		background-position: -6px -105px;
-	}
+		.social-media ul li.facebook {
+			background-position: -6px -105px;
+		}
 
-	section.form .social-media ul li.twitter {
-		background-position: -6px -161px;
-	}
+		.social-media ul li.twitter {
+			background-position: -6px -161px;
+		}
 
-	section.form .social-media ul li.linkedin {
-		background-position: -6px -209px;
-	}
+		.social-media ul li.linkedin {
+			background-position: -6px -209px;
+		}
 
-	section.form .social-media ul li.googleplus {
-		background-position: -6px -257px;
-	}
+		.social-media ul li.googleplus {
+			background-position: -6px -257px;
+		}
 
-	section.form .social-media ul li.whatsapp {
-		background-position: -6px -305px;
-	}
+		.social-media ul li.whatsapp {
+			background-position: -6px -305px;
+		}
 
-	section.form .social-media ul li.email {
-		background-position: -6px -353px;
-	}
+		.social-media ul li.email {
+			background-position: -6px -353px;
+		}
 	
-	section.form .next-page:before {
-		content: "";
-	    float: left;
-	    clear: both;
-	    width: 55px;
-	    height: 53px;
-	    background: url(../../assets/images/empiricus-sprites.png) -248px -25px;
-	    position: absolute;
-	    cursor: pointer;
-    	left: 48%;
-   	    bottom: -25px;
+		.next-page:before {
+			content: "";
+		    float: left;
+		    clear: both;
+		    width: 55px;
+		    height: 53px;
+		    background: ($spriteIcons) -248px -25px;
+		    position: absolute;
+		    cursor: pointer;
+	    	left: 48%;
+	   	    bottom: -25px;
+		}
 	}
 
 	section.text1 {
-		background: #282727;
+		background: $blackColor2;
 	}
 	section.text2 {
-		background: #ffffff;
+		background: $whiteColor;
 	}
 
 	section.know-more {
-		background: url(../../assets/images/institucional.jpg) center center;	
-	}
+		background: ($knowMoreBackground) center center;	
+	
 
-	section.know-more h2 {
+		h2 {
 		font-weight: 900;
-		color: #ffffff;
-	}
+		color: $whiteColor;
+		}
 
-	section.know-more p {
-		color: #ffffff;
+		p {
+		color: $whiteColor;
 		width: 570px;
-	}
-	section.know-more .wrapper {
+		}
+		.wrapper {
 		position: relative;
-	}
+		}
 
-	section.know-more .wrapper:after {
+		.wrapper:after {
 		content: "";
-	    background: url(../../assets/images/empiricus-sprites.png)  -54px 563px;
+	    background: ($spriteIcons)  -54px 563px;
 	    top: -73px;
 	    right: 0px;
 	    height: 435px;
 	    width: 540px;
 	    position: absolute;
+		}
 	}
 
 	section .back-top {
 		position: relative;
 		padding-left: 68px;
 	}
-	section .back-top:before {
+	
+	section	.back-top:before {
 	    content: "";
 	    width: 40px;
 	    height: 40px;
 	    position: absolute;
 	    top: 10px;
 	    left: 20px;
-	    background: url(../../assets/images/empiricus-sprites.png) -309px -26px;
-	}
+	    background: ($spriteIcons) -309px -26px;
+		}
+	
 
 	/* FOOTER  */ 
 	footer {
 		width: 100%;
 		float: left;
-		background: #000;
+		background: $blackColor;
 		padding: 28px 0;
-	}
 
-	footer h3 {
-	    color: #fff;
+		h3 {
+	    color: $whiteColor;
 	    text-transform: uppercase;
 	    font-size: 18px;
 	    font-weight: 400;
 	    margin-bottom: 12px;
-	}
+		}
 
-	footer .pin {
-	    background: url(../../assets/images/empiricus-sprites.png) -72px -136px;
+		.pin {
+	    background: ($spriteIcons) -72px -136px;
 	    width: 36px;
 	    height: 48px;
-	}
-	footer p {
-		color: #fff;
-		font-size: 14px;
-	}
+		}
 
-	footer .f1, footer .f2, footer .f3  {
+		p {
+		color: $whiteColor;
+		font-size: 14px;
+		}
+
+		.f1, .f2, .f3  {
 		width: 410px;
    		float: left;
 		margin-bottom: 60px;
-	}
+		}
 
-	footer .f2 {
+		.f2 {
 		width: 240px;
-	}
+		}
 
-	footer .f3 {
+		.f3 {
 		width: 200px;
 
-	}
+		}
 
-	footer .f3 a:link, footer .f3 a:visited {
+		.f3 a:link, .f3 a:visited {
 		text-decoration: none;
-		color: #fff;
-	}
+		color: $whiteColor;
+		}
 
-	footer .footer-text {
+		.footer-text {
 	    clear: both;
 	    float: left;
 	    font-size: 12px;
 	    margin: 8px 0;
-	}
+		}
 
-	footer .social-media {
+		.social-media {
 		list-style-type: none;
-	}
+		}
 
-	footer .social-media .facebook,
-	footer .social-media .twitter,
-	footer .social-media .linkedin,
-	footer .social-media .googleplus,
-	footer .social-media .whatsapp, 
-	footer .social-media .email	{
+		.social-media .facebook,
+		.social-media .twitter,
+		.social-media .linkedin,
+		.social-media .googleplus,
+		.social-media .whatsapp, 
+		.social-media .email	{
 		float: left;
-		background: url(../../assets/images/empiricus-sprites.png);
+		background: ($spriteIcons);
 		width: 30px;
 		height: 30px;
 		position: relative;
-	}
+		}
 
-	footer .social-media .facebook {
+		.social-media .facebook {
 		background-position: 728px -105px;
-	}
+		}
 
-	footer .social-media .twitter {
+	 	.social-media .twitter {
 		background-position: 698px -105px;
-	}
+		}
 
-	footer .social-media .linkedin {
+	 	.social-media .linkedin {
 		background-position: 668px -105px;
-	}
+		}
 
-	footer .social-media .googleplus {
+	 	.social-media .googleplus {
 		background-position: 639px -105px;
-	}
+		}
 
-	footer .social-media .whatsapp {
+		.social-media .whatsapp {
 		background-position: 609px -105px;
-	}
+		}
 
-	footer .social-media .email {
+	 	.social-media .email {
 		background-position: 580px -105px;
-	}
+		}
 
-	footer .social-media a:link, footer .social-media a:visited {
+	 	.social-media a:link,  .social-media a:visited {
 		width: 30px;
 		height: 30px;
 		position: absolute;
 		top: 0;
 		left: 0;
+		}
 	}
 
 
@@ -449,6 +447,9 @@
 		.wrapper {
 			width: 590px;
 		}
+		section.know-more .wrapper:after {
+			background: transparent;
+		}
 	}
 
 	/* CSS MOBILE PHONES */
@@ -463,5 +464,8 @@
 			font-size: 12px;
 			padding-right: 0px;
 			width: 100%;
+		}
+		section.know-more p {
+			width: 340px;
 		}
 	}
