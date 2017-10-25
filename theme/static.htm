@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Empiricus Research Theme 1.0.0</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,900" rel="stylesheet">
+	<link rel="shortcut icon" href="https://www.empiricus.com.br/wp-content/themes/empiricus_v2/assets/images/icons/ico-favicon.ico">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,900');
+
+	* {
+		padding: 0;
+		outline: none;
+		margin: 0;
+		-webkit-transition:0.1s ease-out;
+		-moz-transition:0.1s ease-out;
+		-o-transition:0.1s ease-out;
+		transition:0.1s ease-out;
+		-webkit-transition-property:background-color,color,border-color,opacity;
+		-moz-transition-property:background-color,color,border-color,opacity;
+		-o-transition-property:background-color,color,border-color,opacity;
+		transition-property:background-color,color,border-color,opacity;
+		font-family: "Raleway", Arial, sans-serif;
+	}
+
+	input,label,select,button,textarea {
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+}
+
+	input:focus	{
+		outline:0;
+	}
+
+	input, textarea	{
+		-webkit-box-sizing:content-box;
+		-moz-box-sizing:content-box;
+		box-sizing:content-box;
+	}
+
+	button,	input[type=reset],	input[type=button],	input[type=submit],	input[type=checkbox], input[type=radio], select	{
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	::-webkit-search-decoration	{
+		display:none;
+	}
+
+	button,	input[type="reset"], input[type="button"], input[type="submit"]	{
+		overflow:visible;
+		width:auto;
+	}
+
+	::-webkit-file-upload-button {	
+		padding:0;
+		border:0;
+		background:none;
+	}
+
+	/* variables 
+		whiteColor: #ffffff;
+		redColor: #b21736;
+		redColor2: #e11a33;
+		blackColor: #000000;
+		grayColor: #6d6d6d;
+	*/
+	
+
+	/* CSS FOR ALL MEDIA QUERIES   */
+	/* HEADER  */
+	header {
+		width: 100%;
+		background: #ffffff;
+		padding: 38px 0 26px 0;
+		float: left;
+	}
+	.wrapper {
+		margin: 0 auto;
+		position: relative;
+
+	}
+	header #logotype {
+		background: url(assets/images/empiricus-sprites.png) 0px 0px;
+	    width: 210px;
+	    height: 90px;
+	    text-indent: -99999px;
+	    position: relative;
+	    float: left;
+	}
+	header #logotype a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 90px;
+
+	}
+	header ul {
+		list-style-type: none;
+		padding-top: 31px;
+		padding-left: 265px;
+	}
+	
+	
+
+	header ul li a:link, header ul li a:visited {
+		padding: 10px;
+    	float: left;
+    	background-color: #ffffff;
+    	font-size: 15px;
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	color: #000000;
+	}
+	header ul li a:hover {
+		background-color: #e11a33;
+		color: #ffffff;
+	}
+
+	/* SECTION  */
+	section {
+		width: 100%;
+		float: left;
+		padding: 73px 0;
+
+	}
+
+	section h1 {
+		font-size: 42px;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 25px;
+	}
+
+	section h2 {
+		color: #6d6d6d;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 30px;
+		font-size: 29px;
+	}
+
+	section p {
+		color: #6d6d6d;
+	    font-weight: 400;
+	    margin-bottom: 38px;
+	    font-size: 21px;
+	    line-height: 30px;
+	}
+
+	section button {
+		background: #b21736;
+		color: #ffffff;
+		text-align: center;
+		padding: 23px 49px;
+		font-size: 21px;
+		text-transform: uppercase;
+		font-weight: 600;
+		cursor: pointer;
+		margin-left: -5px;
+	}
+	section button:hover {
+		background: #e11a33;
+	}
+
+	section .aligncenter {
+		width: 100%;
+		text-align: center;
+		float: left;
+	}
+
+	section h1.red {
+		color: #b21736;
+	}
+
+	section h4 {
+		font-size: 21px;
+		color: #ffffff;
+		font-weight: 400;
+	}
+
+	section.form {
+		padding: 0;
+		position: relative;
+	}
+	section.form #main-slider {
+		background: url(assets/images/dolar.jpg) center center;
+		margin-bottom: -20px;
+	}
+
+	section.form .text {
+		padding: 80px 0;
+		text-align: center;
+	}
+
+	section.form h1 {
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 0;
+	}
+
+	section.form input {
+		padding: 21px 30px;
+	    color: #e11a33;
+	    font-size: 21px;
+	    font-style: italic;
+	    width: 392px;
+	    background: #ffffff;
+	}
+
+	section.form h4 {
+		font-weight: 400;
+		padding: 54px 0;
+		color: #ffffff;
+
+	}
+
+	section.form a:link, section.form a:visited {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	section.form .social-media {
+		position: absolute;
+	    top: 160px;
+	    left: -48px;
+	}
+
+	section.form .social-media ul {
+	    list-style-type: none;
+	    height: 100px;
+	    width: 50px;
+	}
+
+	section.form .social-media ul li{
+		float: left;
+	    background: url(assets/images/empiricus-sprites.png);
+	    height: 48px;
+	    width: 48px;
+	    position: relative;
+	}
+
+	section.form .social-media ul li a:link, section.form .social-media ul li a:visited{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 57px;
+	}
+
+	section.form .social-media ul li.facebook {
+		background-position: -6px -105px;
+	}
+
+	section.form .social-media ul li.twitter {
+		background-position: -6px -161px;
+	}
+
+	section.form .social-media ul li.linkedin {
+		background-position: -6px -209px;
+	}
+
+	section.form .social-media ul li.googleplus {
+		background-position: -6px -257px;
+	}
+
+	section.form .social-media ul li.whatsapp {
+		background-position: -6px -305px;
+	}
+
+	section.form .social-media ul li.email {
+		background-position: -6px -353px;
+	}
+	
+	section.form .next-page:before {
+		content: "";
+	    float: left;
+	    clear: both;
+	    width: 55px;
+	    height: 53px;
+	    background: url(assets/images/empiricus-sprites.png) -248px -25px;
+	    position: absolute;
+	    cursor: pointer;
+    	left: 48%;
+   	    bottom: -46px;
+	}
+
+	section.text1 {
+		background: #282727;
+	}
+	section.text2 {
+		background: #ffffff;
+	}
+
+	section.know-more {
+		background: url(assets/images/institucional.jpg) center center;	
+	}
+
+	section.know-more h2 {
+		font-weight: 900;
+		color: #ffffff;
+	}
+
+	section.know-more p {
+		color: #ffffff;
+		width: 570px;
+	}
+	section.know-more .wrapper {
+		position: relative;
+	}
+
+	section.know-more .wrapper:after {
+		content: "";
+	    background: url(assets/images/empiricus-sprites.png)  -54px 563px;
+	    top: -73px;
+	    right: 0px;
+	    height: 435px;
+	    width: 540px;
+	    position: absolute;
+	}
+
+	section .back-top {
+		position: relative;
+		padding-left: 68px;
+	}
+	section .back-top:before {
+	    content: "";
+	    width: 40px;
+	    height: 40px;
+	    position: absolute;
+	    top: 10px;
+	    left: 20px;
+	    background: url(assets/images/empiricus-sprites.png) -309px -26px;
+	}
+
+	/* FOOTER  */ 
+	footer {
+		width: 100%;
+		float: left;
+		background: #000;
+		padding: 28px 0;
+	}
+
+	footer h3 {
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-size: 18px;
+	    font-weight: 400;
+	    margin-bottom: 12px;
+	}
+
+	footer .pin {
+	    background: url(assets/images/empiricus-sprites.png) -72px -136px;
+	    width: 36px;
+	    height: 48px;
+	}
+	footer p {
+		color: #fff;
+		font-size: 14px;
+	}
+
+	footer .f1, footer .f2, footer .f3  {
+		width: 410px;
+   		float: left;
+		margin-bottom: 60px;
+	}
+
+	footer .f2 {
+		width: 240px;
+	}
+
+	footer .f3 {
+		width: 200px;
+
+	}
+
+	footer .f3 a:link, footer .f3 a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	footer .footer-text {
+	    clear: both;
+	    float: left;
+	    font-size: 12px;
+	    margin: 8px 0;
+	}
+
+	footer .social-media {
+		list-style-type: none;
+	}
+
+	footer .social-media .facebook,
+	footer .social-media .twitter,
+	footer .social-media .linkedin,
+	footer .social-media .googleplus,
+	footer .social-media .whatsapp, 
+	footer .social-media .email	{
+		float: left;
+		background: url(assets/images/empiricus-sprites.png);
+		width: 30px;
+		height: 30px;
+		position: relative;
+	}
+
+	footer .social-media .facebook {
+		background-position: 728px -105px;
+	}
+
+	footer .social-media .twitter {
+		background-position: 698px -105px;
+	}
+
+	footer .social-media .linkedin {
+		background-position: 668px -105px;
+	}
+
+	footer .social-media .googleplus {
+		background-position: 639px -105px;
+	}
+
+	footer .social-media .whatsapp {
+		background-position: 609px -105px;
+	}
+
+	footer .social-media .email {
+		background-position: 580px -105px;
+	}
+
+	footer .social-media a:link, footer .social-media a:visited {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+
+
+	/* CSS  DESKTOP */
+	@media screen and (min-width: 921px) {
+		.wrapper {
+			width: 921px;
+		}
+	}
+
+	/* CSS TABLETS AND LAPTOPS*/
+	@media screen and (max-width: 1165px) {
+		.wrapper {
+			width: 590px;
+		}
+	}
+
+	/* CSS MOBILE PHONES */
+	@media screen and (max-width: 670px), only screen and (max-device-width: 480px) {
+		.wrapper {
+			width: 280px;
+		}
+		header ul {
+			padding-left: initial;
+		}
+		header ul li a:link, header ul li a:visited {
+			font-size: 12px;
+			padding-right: 0px;
+			width: 100%;
+		}
+	}
+
+</style>
+<body>
+	<header>
+		<div class="wrapper">
+			<div id="logotype"><a href="#">Empiricus Research</a></div>
+			<nav>
+				<ul>
+					<li><a href="#">Cadastre-se</a></li>
+					<li><a href="#">Ainda Vale a Pena Comprar Dólar?</a></li>
+					<li><a href="#">Empiricus</a></li>
+					<li><a href="#">Os Analistas</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="form">
+			<div id="main-slider">
+				<div class="wrapper">
+					<div class="social-media">
+						<ul>
+							<li class="facebook"><a href="#facebook"></a></li>
+							<li class="twitter"><a href="#twitter"></a></li>
+							<li class="linkedin"><a href="#linkedin"></a></li>
+							<li class="googleplus"><a href="#googleplus"></a></li>
+							<li class="whatsapp"><a href="#whatsapp"></a></li>
+							<li class="email"><a href="#email"></a></li>
+						</ul>
+					</div>
+					<div class="slider1">
+						<div class="text">
+							<h1>Como Ganhar Dinheiro Diante</br> das Variações do Dólar?<br/>Um Guia Estratégico para Tempos de Incertezas.</h1>
+							
+							<div class="sub-text">
+								<h4>Preencha seu email abaixo que<br/> te enviaremos o relatório gratuito</h4>
+							</div>
+							<div id="leads-form">
+								<form action="" method="post">
+									<input type="text" placeholder="seunome@seuprovedor.com.br" />
+									<button type="submit">Receber</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="next-page"></div>
+	</section>
+	<section class="text1">
+		<div class="wrapper">
+			<h1>Por que baixar esse relatório?</h1>
+			<h4>A Empiricus é totalmente independente e tem o mais alto grau de compromisso com o leitor.<br/>
+			Em 2013, recomendamos aos nossos leitores que comprassem Dólar, na época cotado a <br/>
+			R$1,90. Em 2014, já falávamos que ele chegaria a R$4,00 quando ninguém acreditava ser possível.<br/>
+			Saiba agora como você deve se posicionar em relação à moeda norte-americana nos próximos meses.</h4>
+		</div>
+	</section>
+	<section class="text2">
+		<div class="wrapper">
+			<h1 class="red">você saberá ainda.</h1>
+			<h2>Quais fatores influenciam o comportamento do Dólar?</h2>
+			<p>Muitos. Por isso, designamos nossos analistas a avaliá-los um a um, atribuindo a eles seu devido peso.</p>
+ 
+			<p>As decisões do Banco Central americano (Fed) e a quantidade de dinheiro circulando na economia por exemplo, afetam o preço do Dólar frente ao Real.</p>
+ 
+			<p>Isso modifica o cenário econômico dos principais países do mundo e tem impacto inclusive no bolso de pessoas comuns.</p>
+
+			<h2>O que a alta do Dólar tem a ver com seu bolso?</h2>
+			<p>O comportamento do Dólar influencia diretamente os preços de bens em váios setores da economia brasileira, como gasolina, arroz, feijão, imóveis, automóveis, aluguel, energia elétrica, os smartphones e outros produtos e serviços do nosso dia-a-dia.</p>
+ 
+			<p>Por isso é necessário analisar detalhadamente todas as variáveis domésticas e internacionais que influenciam na taxa de câmbio do Dólar e do Real.</p>
+ 
+			<p>“Vou sair de férias e o Dólar está caro, como eu faço?”. Neste relatório explicamos ainda ao que você deve estar atento quando irá viajar e precisa comprar Dólar.</p>
+
+			<h2>Ainda vale a pena comprar Dólares para investir, ou já perdi a oportunidade?</h2>
+			<p>Muita coisa pode mudar em poucas semanas quando o assunto é câmbio, ainda mais neste momento nebuloso no qual vivemos. Saiba a opinião de nossos analistas sobre como se posicionar.</p>
+
+			<span class="aligncenter">
+				<button class="back-top">Voltar ao Topo</button>
+			</span>
+ 		</div>
+	</section>
+	<section class="know-more">
+		<div class="wrapper">
+			<h2>Conheça a Empiricus</h2>
+			<p>Fundada em 2009, a <strong>Empiricus Research</strong> é a primeira consultoria independente de investimentos do Brasil que oferece conteúdo gratuito e educativo para todos os tipos de investidores.</p>
+			<button>Saiba Mais</button>
+			<div class="logotype-emp"></div>
+		</div>
+	</section>
+	<footer>
+		<div class="wrapper">
+			<div class="f1">
+				<h3>Endereço</h3>
+				<table>
+					<tr>
+						<td class="pin"></td>
+						<td>
+							<p>Rua Joaquim Floriano, 913 - 4º andar<br/>
+          CEP: 04354-013 - Itaim Bibi. São Paulo/SP</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="f2">
+				<h3>Redes Sociais</h3>
+				<ul class="social-media">
+					<li class="facebook"><a href="#facebook"></a></li>
+					<li class="twitter"><a href="#twitter"></a></li>
+					<li class="linkedin"><a href="#linkedin"></a></li>
+					<li class="googleplus"><a href="#googleplus"></a></li>
+					<li class="whatsapp"><a href="#whatsapp"></a></li>
+					<li class="email"><a href="#email"></a></li>
+				</ul>
+			</div>
+			<div class="f3">
+				<h3>Sobre Nós</h3>
+				<p>Conheça mais sobre esse e outros assuntos em <a href="http://www.empiricus.com.br">empiricus.com.br</a></p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<p class="footer-text">Ao se cadastrar você está concordando com os termos de nossa Política de Privacidade. Você pode cancelar sua inscrição a qualquer momento. Este é um serviço gratuito oferecido pela Empiricus. O cadastro em nossa newsletter diária GRÁTIS te habilita a receber este relatório. Nós NÃO compartilharemos seu endereço de e-mail com ninguém.</p>
+
+			<p class="footer-text">Copyright © Empiricus Research 2016</p>
+		</div>
+	</footer>
+</body>
+</html>
